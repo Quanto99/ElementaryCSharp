@@ -4,3 +4,9 @@ c:\users\s\documents\visual studio 2012\Projects\ElementaryCSharp\ElementaryCSha
 c:\users\s\documents\visual studio 2012\Projects\ElementaryCSharp\ElementaryCSharp\bin\Debug\ElementaryCSharp.pdb
 c:\users\s\documents\visual studio 2012\Projects\ElementaryCSharp\ElementaryCSharp\obj\Debug\ElementaryCSharp.exe
 c:\users\s\documents\visual studio 2012\Projects\ElementaryCSharp\ElementaryCSharp\obj\Debug\ElementaryCSharp.pdb
+C:\Users\s\Documents\GitHub\ElementaryCSharp\ElementaryCSharp\bin\Debug\ElementaryCSharp.exe.config
+C:\Users\s\Documents\GitHub\ElementaryCSharp\ElementaryCSharp\obj\Debug\ElementaryCSharp.exe
+C:\Users\s\Documents\GitHub\ElementaryCSharp\ElementaryCSharp\obj\Debug\ElementaryCSharp.pdb
+C:\Users\s\Documents\GitHub\ElementaryCSharp\ElementaryCSharp\bin\Debug\ElementaryCSharp.exe
+C:\Users\s\Documents\GitHub\ElementaryCSharp\ElementaryCSharp\bin\Debug\ElementaryCSharp.pdb
+C:\Users\s\Documents\GitHub\ElementaryCSharp\ElementaryCSharp\obj\Debug\ElementaryCSharp.csprojResolveAssemblyReference.cache

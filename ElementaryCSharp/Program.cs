@@ -10,15 +10,16 @@ namespace ElementaryCSharp
     {
         static void Main(string[] args)
         {
-            X1 x1 = new X1();
-            x1.display("x1");
+            
+            X1 x1 = new X1();   // 1st instance
+            x1.display("x1");   // print static variable
             x1.increment();
-            x1.display("x1");
+            x1.display("x1");   // print static variable
 
-            X1 x2 = new X1();
+            X1 x2 = new X1();   // 2nd instance
             x2.display("x2");
 
-            X1 x3 = new X1();
+            X1 x3 = new X1();   //3rd instance
             x3.display("x3");
             x3.increment();
             x3.display("x3");
