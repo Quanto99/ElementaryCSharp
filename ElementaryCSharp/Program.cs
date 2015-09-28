@@ -37,12 +37,14 @@ namespace ElementaryCSharp
             x1.display("x1");
             x2.display("x2");
             x3.display("x3");
+
+            Console.Write("Class X1:    i={0}\n", X1.i);    // direct access to static member variable
         }   
     }
 
     public class X1
     {
-        private static int i = 0;
+        public static int i = 0;
 
         public X1()
         {
