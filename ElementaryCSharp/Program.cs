@@ -10,6 +10,7 @@ namespace ElementaryCSharp
     {
         static void Main(string[] args)
         {
+            Console.Write("\nStatic member variables\n");
             
             X1 x1 = new X1();   // 1st instance
             x1.display("x1");   // print static variable
@@ -39,12 +40,18 @@ namespace ElementaryCSharp
             x3.display("x3");
 
             Console.Write("Class X1:    i={0}\n", X1.i);    // direct access to static member variable
+            
+            Console.Write("\nStatic Methods\n");
+
+            X1.increment_static();
+            X1.display_static("Class X1");
+
         }   
     }
 
     public class X1
     {
-        public static int i = 0;
+        public static int i;    // initializes to 0
 
         public X1()
         {
@@ -60,5 +67,16 @@ namespace ElementaryCSharp
         {
             i++;
         }
+
+        public static void display_static(string instance)
+        {
+            Console.Write("Instance {0}:    i={1}\n", instance, i);
+        }
+
+        public static void increment_static()
+        {
+            i++;
+        }
+
     }
 }
