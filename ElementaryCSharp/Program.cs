@@ -12,14 +12,17 @@ namespace ElementaryCSharp
         {
             // Todo:  Add argument processing
 
-            int n = 1;
-
+            if (args.Length == 0)
+            {
+                Syntax();
+                return;
+            }
 
             // Break these out into separate items
 
-            switch (n)
+            switch (args[0])
             {
-                case 0:
+                case "static":
 
                     Console.Write("\nStatic member variables\n");
 
@@ -59,7 +62,7 @@ namespace ElementaryCSharp
 
                     break;
 
-                case 1:
+                case "properties":
 
                     // Property exercises
 
@@ -79,12 +82,23 @@ namespace ElementaryCSharp
 
                 default:
 
-                    throw new ArgumentException("Invalid command argument.");
+                    Syntax();
+                    break;
 
             }
 
-        }   
+        }
+
+        public static void Syntax()
+        {
+            Console.WriteLine("Syntax:  ECS <command>\n");
+            Console.WriteLine("Commands:\n");
+            Console.WriteLine("static\n");
+            Console.WriteLine("properties\n");
+        }
+
     }
+
 
     public class X1
     {
