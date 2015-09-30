@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using StaticNamespace;
 using PropertiesNamespace;
+using RecursionNamespace;
 
 namespace ElementaryCSharp
 {
@@ -89,6 +90,31 @@ namespace ElementaryCSharp
 
                     break;
 
+                case "recursion":
+
+                    // When The maximum number of stack frames supported by Visual Studio has been exceeded (5000 stack frames)
+                    // the program is terminated, and no exception is thrown; i.e. an exception is not caught here or in the inner
+                    // exception handler in the Recursion class.
+
+                    try
+                    {
+                        Recursion.infiniteRecursion();
+                    }
+                    catch (StackOverflowException e)
+                    {
+                        Console.Write("ERROR: Stack Overflow\n" + e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Write("ERROR: Generic Exception\n" + e.Message);
+                    }
+                    catch
+                    {
+                        Console.Write("ERROR: Other Exception\n");
+                    }
+
+                    break;
+
                 default:
 
                     Syntax();
@@ -100,10 +126,11 @@ namespace ElementaryCSharp
 
         public static void Syntax()
         {
-            Console.WriteLine("Syntax:  ECS <command>\n");
+            Console.WriteLine("\nSyntax:    ECS <command>");
             Console.WriteLine("Commands:\n");
-            Console.WriteLine("static\n");
-            Console.WriteLine("properties\n");
+            Console.WriteLine("           static");
+            Console.WriteLine("           properties");
+            Console.WriteLine("           recursion");
         }
     }
 }
