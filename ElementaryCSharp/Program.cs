@@ -68,11 +68,21 @@ namespace ElementaryCSharp
                     P1 p = new P1();
 
                     p.a = 41;
-                    //p.b = 42; - would get compiler error since b is read-only
-                    p.c = 999999;
-
                     p.Print("a");
+
+                    //p.b = 42; - would get compiler error since b is read-only
                     p.Print("b");
+
+
+                    try
+                    {
+                        p.c = 999999 + 100;
+                    }
+                    catch (ArgumentOutOfRangeException e)
+                    {
+                        Console.Write("ERROR: " + e.Message + "\n");
+                    }
+
                     p.Print("c");
 
 
