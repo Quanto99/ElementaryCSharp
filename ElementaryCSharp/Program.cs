@@ -74,14 +74,19 @@ namespace ElementaryCSharp
                     //p.b = 42; - would get compiler error since b is read-only
                     p.Print("b");
 
+                    Console.Write("What is the value to be added to 999999?");
+                    string sVal = Console.ReadLine();
+                    // convert input string to int
+                    int x = System.Convert.ToInt32(sVal);
 
                     try
                     {
-                        p.c = 999999 + 100;
+                        p.c = 999999 + x;
                     }
                     catch (ArgumentOutOfRangeException e)
                     {
                         Console.Write("ERROR: " + e.Message + "\n");
+                        break;
                     }
 
                     p.Print("c");
