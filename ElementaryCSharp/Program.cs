@@ -8,6 +8,30 @@ using StaticNamespace;
 using PropertiesNamespace;
 using RecursionNamespace;
 
+// Essential C# 4.0
+//
+//  Data types
+//  Operators and Countrol Flow
+//  Methods and Parameters
+//  Classes
+//  Inheritance
+//  Interfaces
+//  Value Types
+//  Well-Formed Types
+//  Exception Handling
+//  Generics
+//  Delegates and Lambda Expressions
+//  Events
+//  Collection Interfaces with Standard Query Operators
+//  LINQ with Query Expressions
+//  Building Custom Collections
+//  Reflection, Attributes, and Dynamic Programming
+//  Multithreading
+//  Synchronization and More Multithreading Patterns
+//  Platform Interoperability and Unsafe Code
+//  The Common Language Infrastructure
+
+
 namespace ElementaryCSharp
 {
     class Program
