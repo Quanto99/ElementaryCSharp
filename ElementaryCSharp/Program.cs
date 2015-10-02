@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 using StaticNamespace;
 using PropertiesNamespace;
 using RecursionNamespace;
+using DataTypesNamespace;
 
 // Essential C# 4.0
 //
 //  Data types
+//      Floating Point Type (float,double)
+//      Decimal Type
 //  Operators and Countrol Flow
 //  Methods and Parameters
 //  Classes
@@ -147,7 +150,18 @@ namespace ElementaryCSharp
                     }
                     else
                     {
-                        int recursionLevels = System.Convert.ToInt32(sVal);
+                        // Note that the BCL-name for this data type is System.Int16 with range -32,768 to 32,767.
+                        short recursionLevels = 0;
+
+                        try
+                        {
+                            recursionLevels = System.Convert.ToInt16(sVal);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.Write("ERROR: " + e.Message);
+                            break;
+                        }
 
                         try
                         {
@@ -163,6 +177,11 @@ namespace ElementaryCSharp
                         }
                     }
 
+                    break;
+
+                case "datatypes":
+
+                    DataTypes.Run();
                     break;
 
                 default:
@@ -181,6 +200,7 @@ namespace ElementaryCSharp
             Console.WriteLine("           static");
             Console.WriteLine("           properties");
             Console.WriteLine("           recursion");
+            Console.WriteLine("           datatypes");
         }
     }
 }
