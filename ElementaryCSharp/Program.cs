@@ -14,6 +14,8 @@ namespace ElementaryCSharp
     {
         static void Main(string[] args)
         {
+            string sVal;
+
             if (args.Length == 0)
             {
                 Syntax();
@@ -75,7 +77,7 @@ namespace ElementaryCSharp
                     p.Print("b");
 
                     Console.Write("What is the value to be added to 999999?");
-                    string sVal = Console.ReadLine();
+                    sVal = Console.ReadLine();
                     // convert input string to int
                     int x = System.Convert.ToInt32(sVal);
 
@@ -97,25 +99,44 @@ namespace ElementaryCSharp
 
                 case "recursion":
 
-                    // When The maximum number of stack frames supported by Visual Studio has been exceeded (5000 stack frames)
-                    // the program is terminated, and no exception is thrown; i.e. an exception is not caught here or in the inner
-                    // exception handler in the Recursion class.
+                    Console.Write("Input number of levels of recursion: ");
+                    sVal = Console.ReadLine();
 
-                    try
+                    if (sVal == "infinite")
                     {
-                        Recursion.infiniteRecursion();
+                        // When The maximum number of stack frames supported by Visual Studio has been exceeded (5000 stack frames)
+                        // the program is terminated, and no exception is thrown; i.e. an exception is not caught here or in the inner
+                        // exception handler in the Recursion class.
+
+                        try
+                        {
+                            Recursion.infiniteRecursion();
+                        }
+                        catch (StackOverflowException e)
+                        {
+                            Console.Write("ERROR: Stack Overflow\n" + e.Message);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.Write("ERROR: Generic Exception\n" + e.Message);
+                        }
                     }
-                    catch (StackOverflowException e)
+                    else
                     {
-                        Console.Write("ERROR: Stack Overflow\n" + e.Message);
-                    }
-                    catch (Exception e)
-                    {
-                        Console.Write("ERROR: Generic Exception\n" + e.Message);
-                    }
-                    catch
-                    {
-                        Console.Write("ERROR: Other Exception\n");
+                        int recursionLevels = System.Convert.ToInt32(sVal);
+
+                        try
+                        {
+                            Recursion.makeRecursiveCall(recursionLevels);
+                        }
+                        catch (StackOverflowException e)
+                        {
+                            Console.Write("ERROR: Stack Overflow\n" + e.Message);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.Write("ERROR: Generic Exception\n" + e.Message);
+                        }
                     }
 
                     break;
