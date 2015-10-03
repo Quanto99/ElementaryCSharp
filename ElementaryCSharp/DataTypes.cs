@@ -33,11 +33,14 @@ namespace DataTypesNamespace
             {
                 while (true)
                 {
-                    _float *= _float;
+                    _float = (float)Math.Pow(_float, 2);
                     Console.WriteLine("float:   " + _float);
-                    _double *= _double;
+
+                    _double = Math.Pow(_double, 2);
                     Console.WriteLine("double:  " + _double);
-                    _decimal *= _decimal;
+
+                    _decimal = (decimal)Math.Pow((double)_decimal, 2);
+                    //_decimal *= _decimal;
                     Console.WriteLine("decimal: " + _decimal);
                 }
             }
