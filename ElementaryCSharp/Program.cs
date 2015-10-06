@@ -14,6 +14,15 @@ using DataTypesNamespace;
 //  Data types
 //      Floating Point Type (float,double)
 //      Decimal Type
+//      Literals*
+//      Hex literals*
+//      Round-trip formatting*
+//      Verbatim string literal*
+//      String methods: static and instance*
+//      String properties*
+//      String immutability*
+//      System.Text.Stringbuilder data type*
+//      String as reference type
 //  Operators and Countrol Flow
 //  Methods and Parameters
 //  Classes
@@ -182,6 +191,10 @@ namespace ElementaryCSharp
                 case "datatypes":
 
                     DataTypes.Run();
+
+                    DataTypes d = new DataTypes();
+                    d.printStrings();
+
                     break;
 
                 default:

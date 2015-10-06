@@ -13,6 +13,9 @@ namespace DataTypesNamespace
         static double _double = 1000;
         static decimal _decimal = 1000;
 
+        string _s1 = null;
+        string _s2 = null;
+
         // This won't compile...
         //public static double operator ^(
         //    double operand, double exponent)
@@ -49,6 +52,17 @@ namespace DataTypesNamespace
                 Console.WriteLine("ERROR: " + e.Message);
             }
         }
+
+        public void printStrings()
+        {
+            _s1 = _s2;
+            _s2 = "This is a string.";
+
+            Console.WriteLine("_s1: " + _s1);
+            Console.WriteLine("_s2: " + _s2);
+
+        }
+
             
     }
 }
