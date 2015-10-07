@@ -14,10 +14,10 @@ using DataTypesNamespace;
 //  Data types
 //      Floating Point Type (float,double)
 //      Decimal Type
-//      Literals*
-//      Hex literals*
-//      Round-trip formatting*
-//      Verbatim string literal*
+//      Literals
+//      Hex literals
+//      Round-trip formatting
+//      Verbatim string literal
 //      String methods: static and instance*
 //      String properties*
 //      String immutability*
@@ -194,6 +194,7 @@ namespace ElementaryCSharp
 
                     DataTypes d = new DataTypes();
                     d.printStrings();
+                    d.printLiterals();
 
                     break;
 

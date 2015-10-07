@@ -60,8 +60,30 @@ namespace DataTypesNamespace
 
             Console.WriteLine("_s1: " + _s1);
             Console.WriteLine("_s2: " + _s2);
-
         }
+
+        public void printLiterals()
+        {
+            System.Console.WriteLine(42);
+            System.Console.WriteLine(1.618034);
+            System.Console.WriteLine(1.618033988749895);
+            System.Console.WriteLine(1.618033988749895m);
+            System.Console.WriteLine(6.023e23f);
+            System.Console.WriteLine(1.23e-40f);
+            System.Console.WriteLine(0x002a);
+            System.Console.WriteLine("0x{0:X}", 42);
+            System.Console.WriteLine(string.Format("{0:R}", 1.618033988749895));
+
+            System.Console.Write(@"begin triangle
+
+                /\
+               /  \
+              /    \
+             /      \
+            /________\
+end");
+        }
+
 
             
     }
