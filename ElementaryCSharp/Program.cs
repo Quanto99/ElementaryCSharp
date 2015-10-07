@@ -23,6 +23,7 @@ using DataTypesNamespace;
 //      String immutability*
 //      System.Text.Stringbuilder data type*
 //      String as reference type
+//      Conversions
 //  Operators and Countrol Flow
 //  Methods and Parameters
 //  Classes
@@ -198,6 +199,19 @@ namespace ElementaryCSharp
 
                     break;
 
+                case "conversions":
+
+                    System.Console.Write("Input test 16, 32, or 64: ");
+                    string s = System.Console.ReadLine();
+                    int testNum = System.Convert.ToInt32(s);
+
+                    Conversions c = new Conversions();
+
+                    c.Test(testNum);
+
+
+                    break;
+
                 default:
 
                     Syntax();
@@ -215,6 +229,7 @@ namespace ElementaryCSharp
             Console.WriteLine("           properties");
             Console.WriteLine("           recursion");
             Console.WriteLine("           datatypes");
+            Console.WriteLine("           conversions");
         }
     }
 }

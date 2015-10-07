@@ -83,8 +83,53 @@ namespace DataTypesNamespace
             /________\
 end");
         }
+    }
+    class Conversions
+    {
+        Int16 _n16 = Int16.MaxValue;
+        Int32 _n32 = Int32.MaxValue;
+        Int64 _n64 = Int64.MinValue;
 
+        public void Test(int testNum)
+        {
+            switch (testNum)
+            {
+                case 16:
 
-            
+                    checked
+                    {
+                        _n32 = _n16;
+                        System.Console.WriteLine(_n32);
+
+                        _n32 = Int32.MaxValue;
+                        _n16 = (Int16)_n32;
+                        System.Console.WriteLine(_n16);
+                    }
+                    break;
+
+                case 32:
+
+                    checked
+                    {
+                        _n32 += 1;
+                        System.Console.WriteLine(_n32);
+                    }
+                    break;
+
+                case 64:
+
+                    checked
+                    {
+                        string x = "9.11E-31";
+                        float f = float.Parse(x);
+                        System.Console.WriteLine(f);
+
+                        _n64 -= 1;
+                        System.Console.WriteLine(_n64);
+                    }
+                    break;
+
+            }
+        }
     }
 }
