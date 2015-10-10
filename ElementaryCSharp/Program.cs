@@ -212,6 +212,32 @@ namespace ElementaryCSharp
 
                     break;
 
+                case "parameters":
+
+                    Console.WriteLine("Swapping 'First' and 'Second'");
+
+                    string first = "First";
+                    string second = "Second";
+
+                    Methods.SwapR(ref first, ref second);
+                    Console.WriteLine("By Reference: First = {0}  Second = {1}", first, second);
+
+                    first = "First";
+                    second = "Second";
+
+                    Methods.SwapV(first, second);
+                    Console.WriteLine("By Value: First = {0}  Second = {1}", first, second);
+
+                    Console.Write("\nInput the number to be squared and square rooted: ");
+                    double y = double.Parse(Console.ReadLine());
+                    
+                    double squareRoot;
+                    double squared = Methods.Squares(y, out squareRoot);
+
+                    Console.WriteLine("Squared: {0}     Square Root: {1}", squared, squareRoot);
+
+                    break;
+
                 default:
 
                     Syntax();
@@ -230,6 +256,7 @@ namespace ElementaryCSharp
             Console.WriteLine("           recursion");
             Console.WriteLine("           datatypes");
             Console.WriteLine("           conversions");
+            Console.WriteLine("           parameters");
         }
     }
 }
