@@ -28,11 +28,19 @@ using DataTypesNamespace;
 //  Methods and Parameters
 //  Classes
 //  Inheritance
+//      Access Modifiers
+//      Extension Methods
+//      Sealed classes
+//      virtual modifier
+//      new modifier
+//      override modifier
+//      abstract class
 //  Interfaces
 //  Value Types
 //  Well-Formed Types
 //  Exception Handling
 //  Generics
+//      Constraints
 //  Delegates and Lambda Expressions
 //  Events
 //  Collection Interfaces with Standard Query Operators
@@ -205,10 +213,11 @@ namespace ElementaryCSharp
                     string s = System.Console.ReadLine();
                     int testNum = System.Convert.ToInt32(s);
 
-                    Conversions c = new Conversions();
+                    //Conversions c = new Conversions(); --> can't declare variable of static type and can't instantiate static class
 
-                    c.Test(testNum);
+                    //c.Test(testNum);    --> static member Test can't be accessed with an instance reference
 
+                    Conversions.Test(testNum);
 
                     break;
 

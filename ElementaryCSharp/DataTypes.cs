@@ -84,13 +84,13 @@ namespace DataTypesNamespace
 end");
         }
     }
-    class Conversions
+    static class Conversions
     {
-        Int16 _n16 = Int16.MaxValue;
-        Int32 _n32 = Int32.MaxValue;
-        Int64 _n64 = Int64.MinValue;
+        static Int16 _n16 = Int16.MaxValue;
+        static Int32 _n32 = Int32.MaxValue;
+        static Int64 _n64 = Int64.MinValue;
 
-        public void Test(int testNum)
+        public static void Test(int testNum)
         {
             switch (testNum)
             {
