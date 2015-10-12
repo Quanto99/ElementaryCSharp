@@ -217,7 +217,7 @@ namespace ElementaryCSharp
 
                     //c.Test(testNum);    --> static member Test can't be accessed with an instance reference
 
-                    Conversions.Test(testNum);
+                    Conversions.Test(testNum);  // this reference to Conversions causes its static constructor to be called
 
                     break;
 

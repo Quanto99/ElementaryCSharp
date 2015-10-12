@@ -90,6 +90,11 @@ end");
         static Int32 _n32 = Int32.MaxValue;
         static Int64 _n64 = Int64.MinValue;
 
+        static Conversions()
+        {
+            Console.WriteLine("Executing the static constructor Conversions()");
+        }
+
         public static void Test(int testNum)
         {
             switch (testNum)
