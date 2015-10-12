@@ -222,16 +222,23 @@ namespace ElementaryCSharp
                     Methods.SwapR(ref first, ref second);
                     Console.WriteLine("By Reference: First = {0}  Second = {1}", first, second);
 
+                    //Methods.SwapR(first, second);   // still by reference?  won't compile
+                    //Console.WriteLine("By Reference: First = {0}  Second = {1}", first, second);
+
                     first = "First";
                     second = "Second";
 
                     Methods.SwapV(first, second);
                     Console.WriteLine("By Value: First = {0}  Second = {1}", first, second);
 
+                    //Methods.SwapV(ref first, ref second);   // by ref or value? won't compile
+                    //Console.WriteLine("By Value: First = {0}  Second = {1}", first, second);
+
                     Console.Write("\nInput the number to be squared and square rooted: ");
                     double y = double.Parse(Console.ReadLine());
                     
                     double squareRoot;
+                    squareRoot = 99;    // assign value to output parameter before call - of course the compiler allows this
                     double squared = Methods.Squares(y, out squareRoot);
 
                     Console.WriteLine("Squared: {0}     Square Root: {1}", squared, squareRoot);

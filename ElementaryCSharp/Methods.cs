@@ -8,6 +8,7 @@ namespace ElementaryCSharp
 {
     class Methods
     {
+        // arguments passed by reference
         public static void SwapR(ref string first, ref string second)
         {
             string temp = first;
@@ -15,6 +16,7 @@ namespace ElementaryCSharp
             second = temp;
         }
 
+        // arguments passed by value
         public static void SwapV(string first, string second)
         {
             string temp = first;
@@ -22,13 +24,14 @@ namespace ElementaryCSharp
             second = temp;
         }
 
+        // example of output parameter and return value
         public static double Squares(double x, out double squareRoot)
         {
             double squared;
 
-            squareRoot = System.Math.Sqrt(x);
+            squareRoot = System.Math.Sqrt(x);   // output parameter assignment
 
-            squared = x * x;
+            squared = x * x;    // return value assignment
 
             return squared;
         }
