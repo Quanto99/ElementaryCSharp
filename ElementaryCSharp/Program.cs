@@ -18,15 +18,17 @@ using DataTypesNamespace;
 //      Hex literals
 //      Round-trip formatting
 //      Verbatim string literal
-//      String methods: static and instance*
-//      String properties*
-//      String immutability*
+//      String methods: static and instance
+//      String properties
+//      String immutability
 //      System.Text.Stringbuilder data type*
 //      String as reference type
 //      Conversions
 //  Operators and Countrol Flow
 //  Methods and Parameters
+//      reference, value, and output parameters
 //  Classes
+//      extension methods
 //  Inheritance
 //      Access Modifiers
 //      Extension Methods
