@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 using StaticNamespace;
 using PropertiesNamespace;
@@ -108,6 +109,21 @@ namespace ElementaryCSharp
 
                     S1.increment_static();
                     S1.display_static("Class S1");
+
+                    
+                    try{
+                        DirectoryInfo directory = new DirectoryInfo(".\\Source");
+                        Console.WriteLine("Moving {0} to {1}", directory.FullName, ".\\Root");
+                        directory.MoveTo(".\\Root");
+                        DirectoryInfoExtension.CopyTo(directory, ".\\Target", SearchOption.AllDirectories, "*");
+                    }
+                    catch (IOException e)
+                    {
+                        Console.WriteLine("ERROR: " + e.Message);
+                        Console.WriteLine("Possibly improper setup.");
+                        Console.WriteLine("In the execution directory, ensure there is a Source directory, with subdirectories, and files in those subdirectories.");
+                        Console.WriteLine("Also, no directories named Root or Target - those will be created.");
+                    }
 
                     break;
 
@@ -256,6 +272,11 @@ namespace ElementaryCSharp
 
                     break;
 
+                case "extension methods":
+
+                    Console.WriteLine("NYI.....");
+                    break;
+
                 default:
 
                     Syntax();
@@ -275,6 +296,7 @@ namespace ElementaryCSharp
             Console.WriteLine("           datatypes");
             Console.WriteLine("           conversions");
             Console.WriteLine("           parameters");
+            Console.WriteLine("           extension methods");
         }
     }
 }

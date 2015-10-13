@@ -33,6 +33,7 @@ namespace ElementaryCSharp
                 {
                     foreach (string file in Directory.GetFiles(sourceDirectory.FullName, searchPattern))
                     {
+                        Console.WriteLine("Copying {0} to {1}", file, target + Path.GetFileName(file));
                         File.Copy(file, target + Path.GetFileName(file), true);
                     }
                 }
