@@ -272,20 +272,9 @@ namespace ElementaryCSharp
 
                     break;
 
-                case "extensionmethods":
-                   
-                    try{
-                        DirectoryInfo directory = new DirectoryInfo(".\\Source");
-                        directory.CopyTo(".\\Target", SearchOption.AllDirectories, "*");
-                    }
-                    catch (IOException e)
-                    {
-                        Console.WriteLine("ERROR: " + e.Message);
-                        Console.WriteLine("Possibly improper setup.");
-                        Console.WriteLine("In the execution directory, ensure there is a Source directory, with subdirectories, and files in those subdirectories.");
-                        Console.WriteLine("Also, no directories named Root or Target - those will be created.");
-                    }
+                case "extension methods":
 
+                    Console.WriteLine("NYI.....");
                     break;
 
                 default:
@@ -307,7 +296,7 @@ namespace ElementaryCSharp
             Console.WriteLine("           datatypes");
             Console.WriteLine("           conversions");
             Console.WriteLine("           parameters");
-            Console.WriteLine("           extensionmethods");
+            Console.WriteLine("           extension methods");
         }
     }
 }
