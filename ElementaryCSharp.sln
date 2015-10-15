@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ElementaryCSharp\Static.cs = ElementaryCSharp\Static.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileScan", "FileScan\FileScan.csproj", "{F0B7B896-0104-4C10-9059-4B27507F40D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{DA9C8E41-5429-47D2-A6F6-933D919215A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9C8E41-5429-47D2-A6F6-933D919215A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9C8E41-5429-47D2-A6F6-933D919215A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B7B896-0104-4C10-9059-4B27507F40D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B7B896-0104-4C10-9059-4B27507F40D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B7B896-0104-4C10-9059-4B27507F40D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B7B896-0104-4C10-9059-4B27507F40D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

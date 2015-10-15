@@ -1,0 +1,6 @@
+C:\Users\s\Documents\GitHub\ElementaryCSharp\FileScan\obj\Debug\FileScan.csprojResolveAssemblyReference.cache
+C:\Users\s\Documents\GitHub\ElementaryCSharp\FileScan\bin\Debug\FileScan.exe.config
+C:\Users\s\Documents\GitHub\ElementaryCSharp\FileScan\bin\Debug\FileScan.exe
+C:\Users\s\Documents\GitHub\ElementaryCSharp\FileScan\bin\Debug\FileScan.pdb
+C:\Users\s\Documents\GitHub\ElementaryCSharp\FileScan\obj\Debug\FileScan.exe
+C:\Users\s\Documents\GitHub\ElementaryCSharp\FileScan\obj\Debug\FileScan.pdb
