@@ -18,15 +18,18 @@ namespace FileScan
                 return;
             }
 
-            DirectoryInfo d = new DirectoryInfo(args[0]);
-            FileInformation.Scan(d, SearchOption.AllDirectories, "*");
+            bool print = (args.Length > 1 && args[1] == "-p") ? true : false;
 
-            Console.WriteLine("TotalSize = {0}", FileInformation.totalsize);
+            DirectoryInfo d = new DirectoryInfo(args[0]);
+            FileInformation f = new FileInformation();
+            f.Scan(d, SearchOption.AllDirectories, "*", print);
+
+            Console.WriteLine("TotalSize = {0} MB", f.dirSize/1000000);
         }
 
         public static void Syntax()
         {
-            Console.WriteLine("Syntax:  FileScan <full directory path>");
+            Console.WriteLine("Syntax:  FileScan <full directory path> -p");
         }
     }
 }

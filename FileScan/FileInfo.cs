@@ -10,9 +10,10 @@ namespace FileScan
 {
     class FileInformation
     {
-        public static Int64 totalsize = 0;
+        public Int64 dirSize = 0;
+        private Int64 subdirSize = 0;
 
-        public static void Scan(DirectoryInfo dir, SearchOption option, string searchPattern)
+        public Int64 Scan(DirectoryInfo dir, SearchOption option, string searchPattern, bool print=true)
         {
             Console.WriteLine(dir.FullName);
 
@@ -22,10 +23,12 @@ namespace FileScan
 
                 foreach (FileInfo f in fiArray)
                 {
-                    Console.WriteLine("     {0}              {1} bytes", f.Name, f.Length);
-                    totalsize += f.Length;
+                    if (print)  Console.WriteLine("     {0}              {1} bytes", f.Name, f.Length);
+                    dirSize += f.Length;
                 }
             }
+
+            if (print) Console.WriteLine("{0} directory size {1} bytes", dir.FullName, dirSize);
 
             // Scan subdirectories (recursively)
             if (option == SearchOption.AllDirectories)
@@ -33,10 +36,13 @@ namespace FileScan
                 foreach (string element in Directory.GetDirectories(dir.FullName))
                 {
                     DirectoryInfo d = new DirectoryInfo(element);
-                    Scan (d, option, searchPattern);
-                    Console.WriteLine("{0} bytes", totalsize);
+                    subdirSize += Scan (d, option, searchPattern, print);
                 }
             }
+
+            if (print) Console.WriteLine("{0} subdirectory size {1} bytes", dir.FullName, subdirSize);
+
+            return dirSize + subdirSize;
         }
     }
 }
