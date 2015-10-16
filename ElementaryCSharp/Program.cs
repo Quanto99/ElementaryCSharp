@@ -288,6 +288,38 @@ namespace ElementaryCSharp
 
                     break;
 
+                case "delegates":
+
+                    int[] items = new int[100];
+                    ComparisonHandler ch;       // the delegate
+
+                    Random random = new Random();
+
+                    ch = DelegateSample.GreaterThan; // delegate method 1
+
+                    for (int k = 0; k < 2; k++)
+                    {
+
+                        for (int i = 0; i < items.Length; i++)
+                        {
+                            items[i] = random.Next(int.MinValue, int.MaxValue);
+                        }
+
+                        DelegateSample.BubbleSort(items, ch);
+
+                        for (int i = 0; i < items.Length; i++)
+                        {
+                            Console.WriteLine(items[i]);
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        ch = DelegateSample.LessThan;    // delegate method 2
+                    }
+
+                    Console.ForegroundColor = ConsoleColor.Green;
+
+                    break;
+
                 default:
 
                     Syntax();
@@ -308,6 +340,7 @@ namespace ElementaryCSharp
             Console.WriteLine("           conversions");
             Console.WriteLine("           parameters");
             Console.WriteLine("           extensionmethods");
+            Console.WriteLine("           delegates");
         }
     }
 }
