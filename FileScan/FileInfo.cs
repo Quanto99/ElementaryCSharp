@@ -24,6 +24,8 @@ namespace FileScan
 
         public Int64 Scan(DirectoryInfo dir, SearchOption option, string searchPattern, printLevel printlvl=printLevel.all)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+
             if (printlvl == printLevel.all | printlvl == printLevel.files) Console.WriteLine(dir.FullName);
 
             for (int i = 0; i < searchPattern.Length; i++)
@@ -42,10 +44,12 @@ namespace FileScan
             if (dirSize >= 1048576)
             {
                 dirSize /= 1048576; units = "MB";
+                Console.ForegroundColor = ConsoleColor.Red;
             }
             else if (dirSize >= 1024)
             {
                 dirSize /= 1024; units = "K";
+                Console.ForegroundColor = ConsoleColor.Green;
             }
 
             if (printlvl == printLevel.all | printlvl == printLevel.directories) Console.WriteLine("{0} directory size {1}{2}", dir.FullName, dirSize, units);
@@ -60,14 +64,17 @@ namespace FileScan
                 }
             }
 
+            Console.ForegroundColor = ConsoleColor.Green;
             units = "bytes";
             if (subdirSize >= 1048576)
             {
                 subdirSize /= 1048576; units = "MB";
+                Console.ForegroundColor = ConsoleColor.Red;
             }
             else if (subdirSize >= 1024)
             {
                 subdirSize /= 1024; units = "K";
+                Console.ForegroundColor = ConsoleColor.Green;
             }
             if (printlvl == printLevel.all | printlvl == printLevel.directories) Console.WriteLine("{0} subdirectory size {1}{2}", dir.FullName, subdirSize, units);
 
